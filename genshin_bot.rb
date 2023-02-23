@@ -3,7 +3,7 @@ require 'discordrb'
 #トークン
 require 'configatron'
 require_relative 'config.rb'
-bot = Discordrb::Commands::CommandBot.new token: configatron.token, client_id: configatron.botid , prefix: configatron.prefix
+bot = Discordrb::Commands::CommandBot.new token: ENV['TOKEN'], client_id: ENV['BOT_ID'] , prefix: '/'
 
 # 曜日取得
 require "date"
